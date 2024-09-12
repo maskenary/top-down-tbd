@@ -19,15 +19,15 @@ move_and_collide(xMovement, yMovement, collisionObjects)
 
 if (xMovement != 0 or yMovement != 0)
 {
-	if (state = STATES.IDLE)
+	if (state = PLAYERSTATES.IDLE)
 	{
 		image_index = 0;
 	}
-	state = STATES.WALKING;
+	state = PLAYERSTATES.WALKING;
 }
 else
 {
-	state = STATES.IDLE;
+	state = PLAYERSTATES.IDLE;
 }
 #endregion
 

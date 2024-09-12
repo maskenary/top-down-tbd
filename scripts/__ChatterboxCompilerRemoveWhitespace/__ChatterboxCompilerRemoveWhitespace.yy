@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__ChatterboxCompilerRemoveWhitespace",
   "isCompatibility":false,
   "isDnD":false,

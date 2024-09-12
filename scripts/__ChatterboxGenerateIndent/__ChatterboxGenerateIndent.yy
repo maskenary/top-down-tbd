@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__ChatterboxGenerateIndent",
   "isCompatibility":false,
   "isDnD":false,

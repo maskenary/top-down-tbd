@@ -9,10 +9,11 @@ yMovement = 0;
 image_speed = 0;
 image_index = 1;
 
-enum STATES {
+enum PLAYERSTATES 
+{
 	IDLE,
 	WALKING,
 }
-state = STATES.WALKING;
+state = PLAYERSTATES.WALKING;
 
 StartDialogue("Start", "dialoguetest.yarn")

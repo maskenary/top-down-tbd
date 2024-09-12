@@ -3,7 +3,8 @@
 
 if ChatterboxIsStopped(chatterbox)
 {
-	show_debug_message("stopped")
+	instance_destroy(self)
+	show_debug_message("DESTROYED DIALOGUE BOX")
 }
 else if ChatterboxIsWaiting(chatterbox)
 {
@@ -12,10 +13,10 @@ else if ChatterboxIsWaiting(chatterbox)
 		ChatterboxContinue(chatterbox);
 		ChatterboxUpdate();
 	}
-	show_debug_message("waiting")
 }
-else //waiting for options
+else if ChatterboxGetOptionCount(chatterbox) > 0
 {
+	state = DIALOGUESTATES.OPTIONS
 	show_debug_message("waiting for options")
 	var _index = undefined;
     if (keyboard_check_released(ord("1"))) _index = 0;
@@ -28,4 +29,9 @@ else //waiting for options
 		ChatterboxSelect(chatterbox, _index);
 		ChatterboxUpdate();
 	}
+else 
+{
+	state = DIALOGUESTATES.WRITING
+	
+}
 }

@@ -6,11 +6,11 @@ draw_self()
 
 switch (state)
 {
-	case STATES.IDLE:
+	case PLAYERSTATES.IDLE:
 		image_index = 1;
 		image_speed = 0;
 	break;
-	case STATES.WALKING:
+	case PLAYERSTATES.WALKING:
 		var _dir = point_direction(x, y, x + xMovement, y + yMovement)
 		switch (_dir)
 		{

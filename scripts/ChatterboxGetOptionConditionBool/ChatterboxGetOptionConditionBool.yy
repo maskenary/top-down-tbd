@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"ChatterboxGetOptionConditionBool",
   "isCompatibility":false,
   "isDnD":false,
