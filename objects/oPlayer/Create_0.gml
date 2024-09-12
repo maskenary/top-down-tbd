@@ -14,3 +14,5 @@ enum STATES {
 	WALKING,
 }
 state = STATES.WALKING;
+
+StartDialogue("Start", "dialoguetest.yarn")
