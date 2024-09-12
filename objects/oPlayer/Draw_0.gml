@@ -4,28 +4,27 @@
 draw_self()
 #region Movement Animation
 
-if (xMovement > 0)
+switch (state)
 {
-	playAnimation(sPlayerSide)
-	image_xscale = 1;
+	case STATES.IDLE:
+		image_index = 1;
+		image_speed = 0;
+	break;
+	case STATES.WALKING:
+		var _dir = point_direction(x, y, x + xMovement, y + yMovement)
+		switch (_dir)
+		{
+			case 0: sprite_index = sPlayerSide; image_xscale = 1; image_speed = 1; break;
+			case 45: sprite_index = sPlayerSide; image_xscale = 1; image_speed = 1; break;
+			case 90: sprite_index = sPlayerUp; image_speed = 1; break;
+			case 135: sprite_index = sPlayerSide; image_xscale = -1; image_speed = 1; break;
+			case 180: sprite_index = sPlayerSide; image_xscale = -1; image_speed = 1; break;
+			case 225: sprite_index = sPlayerSide; image_xscale = -1; image_speed = 1; break;
+			case 270: sprite_index = sPlayerDown; image_speed = 1; break;
+			case 315: sprite_index = sPlayerSide; image_xscale = 1; image_speed = 1; break;
+		}
+		show_debug_message(_dir)
+	break;
 }
-else if (xMovement < 0)
-{
-	playAnimation(sPlayerSide)
-	image_xscale = -1;
-}
-else if (yMovement > 0)
-{
-	playAnimation(sPlayerDown)
-}
-else if (yMovement < 0)
-{
-	playAnimation(sPlayerUp)
-}
-else 
-{
-	image_index = 1;
-	image_speed = 0;
-	inAnimation = false;
-}
+
 #endregion

@@ -5,4 +5,3 @@ camera = view_camera[0];
 player = oPlayer;
 camWidth = camera_get_view_width(camera)
 camHeight = camera_get_view_height(camera)
-

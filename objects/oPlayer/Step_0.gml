@@ -15,27 +15,20 @@ if (xMovement != 0) and (yMovement != 0) // normalize
 	yMovement *= 0.707107;
 }
 
-if (place_meeting(x + xMovement, y, collisionObjects)) 
+move_and_collide(xMovement, yMovement, collisionObjects)
+
+if (xMovement != 0 or yMovement != 0)
 {
-	while (!place_meeting(x + sign(xMovement), y, collisionObjects)) 
+	if (state = STATES.IDLE)
 	{
-		x += sign(xMovement);
+		image_index = 0;
 	}
-	xMovement = 0;
+	state = STATES.WALKING;
 }
-
-if (place_meeting(x, y + yMovement, collisionObjects)) 
+else
 {
-	while (!place_meeting(x, y + sign(yMovement), collisionObjects)) 
-	{
-		y += sign(yMovement);
-	}
-	yMovement = 0;
+	state = STATES.IDLE;
 }
-
-x += xMovement
-y += yMovement
-
 #endregion
 
 
