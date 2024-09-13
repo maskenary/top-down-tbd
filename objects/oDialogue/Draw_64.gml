@@ -6,30 +6,35 @@
 var _x = (display_get_gui_width()/2) - 400;
 var _y = (display_get_gui_height()/2) + 100;
 draw_sprite_ext(boxSprite, -1, _x, _y, 1, 1, 0, c_white, 1);
-	
+
+var _dialogueContent = scribble(ChatterboxGetContentSpeech(chatterbox, 0))
+var _dialogueSpeaker = scribble(ChatterboxGetContentSpeaker(chatterbox, 0))
+
 if (ChatterboxGetContentSpeaker(chatterbox, 0) == "Player")
 {
-	scribble("[fnDialogue]"+ChatterboxGetContentSpeech(chatterbox, 0)).draw(_x + 400, _y + 100, typist)
-	scribble("[fnDialogue]Player").draw(_x + 40, _y + 5)
+	_dialogueContent.draw(_x + 400, _y + 100, typist)
+	_dialogueSpeaker.draw(_x + 40, _y + 5)
 }
 else 
 {
-	// Offsets for NPCs
-	scribble("[fnDialogue]"+ChatterboxGetContentSpeech(chatterbox, 0)).draw(_x + 40, _y + 100, typist)
-	scribble("[fnDialogue]"+ChatterboxGetContentSpeaker(chatterbox, 0)).draw(_x + 40, _y + 5)
+	_dialogueContent.wrap(1200)
+	_dialogueSpeaker.draw(_x + 40, _y + 5)
+	_dialogueContent.draw(_x + 40, _y + 100, typist)
 }
 
 
 if state = stateOptions
 {
+	/*
 	var _i = 0;
 	repeat(ChatterboxGetOptionCount(chatterbox))
     {
-        var _string = ChatterboxGetOption(chatterbox, _i);
-        scribble("[fnDialogue]" + string(_i+1) + ") " + _string).draw(_x + 40, _y + 300 - string_height_scribble("[fnDialogue]"+_string)*ChatterboxGetOptionCount(chatterbox));
-        _y += string_height_scribble("[fnDialogue]"+_string); // spacing between options
+        var _string = scribble(string(_i+1) + ") " + ChatterboxGetOption(chatterbox, _i));
+        _string.draw(_x + 40, _y + 300 - string_height_scribble(_string)*ChatterboxGetOptionCount(chatterbox));
+        _y += string_height_scribble(_string); // spacing between options
         ++_i; //next line index
     }
+	*/
 }
 
 

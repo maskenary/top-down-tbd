@@ -10,3 +10,5 @@ if ChatterboxIsStopped(chatterbox)
 	instance_destroy(self)
 }
 
+if (mouse_check_button(1)){show_debug_message(mouse_x)}
+

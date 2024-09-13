@@ -8,6 +8,7 @@ textSpeed = 1;
 
 boxSprite = sDialogueBox
 
+scribble_font_set_default("fnDialogue");
 typist = scribble_typist();
 typist.in(textSpeed, textFade);
 
