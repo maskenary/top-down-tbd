@@ -1,8 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function ChatterboxUpdate(){
-	text = ChatterboxGetContent(chatterbox, 0)
-	node = ChatterboxGetCurrent(chatterbox)
+function ChatterboxUpdate(_chatterbox){
+	text = ChatterboxGetContent(_chatterbox, 0)
+	node = ChatterboxGetCurrent(_chatterbox)
 }
 
 // Create an oDialogue according to parameters
@@ -16,5 +16,4 @@ function StartDialogue(_node, _file)
 		chatterbox = ChatterboxCreate();
 		ChatterboxJump(chatterbox, _node) // Found in datafiles folder
 	}
-	
 }

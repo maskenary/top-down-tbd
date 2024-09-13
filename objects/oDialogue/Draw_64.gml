@@ -3,10 +3,9 @@
 
 switch (state)
 {
-	case DIALOGUESTATES.WRITING
-	{
+	case DIALOGUESTATES.WRITING:
 		//check CD timer
 		
 		//if not on CD, change state to waiting
-	}
+	break;
 }

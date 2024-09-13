@@ -11,7 +11,7 @@ else if ChatterboxIsWaiting(chatterbox)
 	if keyboard_check(vk_space)
 	{
 		ChatterboxContinue(chatterbox);
-		ChatterboxUpdate();
+		ChatterboxUpdate(chatterbox);
 	}
 }
 else if ChatterboxGetOptionCount(chatterbox) > 0
@@ -27,7 +27,7 @@ else if ChatterboxGetOptionCount(chatterbox) > 0
     if (_index != undefined)
 	{
 		ChatterboxSelect(chatterbox, _index);
-		ChatterboxUpdate();
+		ChatterboxUpdate(chatterbox);
 	}
 else 
 {
