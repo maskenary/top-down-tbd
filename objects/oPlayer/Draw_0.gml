@@ -15,4 +15,9 @@ switch (state)
 		animateSprite(sPlayerWalking)
 		image_speed = 1; 
 	break;
+	case stateLocked:
+		image_speed = 0;
+		animateSprite(sPlayerIdle)	
+	break;
+	
 }

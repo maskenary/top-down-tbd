@@ -3,10 +3,26 @@
 
 chatterbox = undefined
 cooldown = 0.5;
+textFade = 10;
+textSpeed = 1;
+
+boxSprite = sDialogueBox
+
+typist = scribble_typist();
+typist.in(textSpeed, textFade);
+
+function startCooldown()
+{
+	alarm[0] = cooldown * game_get_speed(gamespeed_fps)
+}
+function checkCooldown()
+{
+	return alarm[0] == -1
+}
 
 function stateWriting()
 {
-	if (alarm[0] = -1)
+	if (typist.get_state() == 1 and checkCooldown())
 	{
 		if ChatterboxIsWaiting(chatterbox)
 		{
@@ -19,25 +35,23 @@ function stateWriting()
 	}
 	else
 	{
-		show_debug_message("in cooldown")
+		show_debug_message(typist.get_state())
 	}
 }
 
 function stateWaiting()
 {
-	show_debug_message("waiting")
 	if keyboard_check(vk_space)
 	{
+		startCooldown()
 		ChatterboxContinue(chatterbox);
 		ChatterboxUpdate(chatterbox);
 		state = stateWriting
-		alarm[0] = game_get_speed(gamespeed_fps) * cooldown;
 	}
 }
 
 function stateOptions()
 {
-	show_debug_message("options")
 	var _index = undefined;
 	if (keyboard_check_released(ord("1"))) _index = 0;
 	if (keyboard_check_released(ord("2"))) _index = 1;
@@ -49,9 +63,7 @@ function stateOptions()
 		ChatterboxSelect(chatterbox, _index);
 		ChatterboxUpdate(chatterbox);
 		state = stateWriting
-		alarm[0] = game_get_speed(gamespeed_fps) * cooldown;
 	}
 }
 state = stateWriting
-alarm[0] = game_get_speed(gamespeed_fps) * cooldown;
 

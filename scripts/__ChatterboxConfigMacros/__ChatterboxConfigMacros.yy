@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__ChatterboxConfigMacros",
   "isCompatibility":false,
   "isDnD":false,

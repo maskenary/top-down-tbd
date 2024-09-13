@@ -5,7 +5,8 @@ state();
 
 if ChatterboxIsStopped(chatterbox)
 {
-	instance_destroy(self)
+	with (oPlayer) { state = stateIdle; }
 	show_debug_message("DESTROYED DIALOGUE BOX")
+	instance_destroy(self)
 }
 

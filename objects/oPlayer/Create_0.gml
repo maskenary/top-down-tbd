@@ -1,14 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+image_speed = 0;
 walkSpeed = 1
 collisionTileId = layer_tilemap_get_id(layer_get_id("TilesCollision"));
 collisionObjects = [collisionTileId, oCollidables];
 xMovement = 0;
 yMovement = 0;
 dir = point_direction(x, y, x , y + 1)
-
-StartDialogue("Start", "dialoguetest.yarn")
 
 function move()
 {
@@ -45,7 +44,6 @@ function animateSprite(_animationSprite)
 
 function stateIdle()
 {
-	image_speed = 0;
 	move();
 	if (xMovement != 0 or yMovement != 0)
 	{	
@@ -55,7 +53,6 @@ function stateIdle()
 
 function stateWalking()
 {
-	image_speed = 1;
 	move();
 	if (xMovement == 0 and yMovement == 0)
 	{
@@ -63,4 +60,13 @@ function stateWalking()
 	}
 }
 
+function stateLocked()
+{
+	
+}
+
 state = stateIdle;
+
+StartDialogue("Start", "dialoguetest.yarn")
+state = stateLocked;
+
