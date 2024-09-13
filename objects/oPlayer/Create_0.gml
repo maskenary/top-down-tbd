@@ -8,13 +8,6 @@ xMovement = 0;
 yMovement = 0;
 dir = point_direction(x, y, x , y + 1)
 
-enum PLAYERSTATES 
-{
-	IDLE,
-	WALKING,
-}
-state = PLAYERSTATES.IDLE;
-
 StartDialogue("Start", "dialoguetest.yarn")
 
 function move()
@@ -34,13 +27,6 @@ function move()
 	move_and_collide(xMovement, yMovement, collisionObjects)
 }
 
-/*
-with (instance_create_depth(x, y, 0, oCape))
-{
-	player = other;
-}
-*/
-
 function animateSprite(_animationSprite)
 {
 	if sprite_index != _animationSprite{ sprite_index = _animationSprite }
@@ -56,3 +42,25 @@ function animateSprite(_animationSprite)
 		image_index = _cycleLength * _cardinalDirection
 	}
 }
+
+function stateIdle()
+{
+	image_speed = 0;
+	move();
+	if (xMovement != 0 or yMovement != 0)
+	{	
+		state = stateWalking;
+	}
+}
+
+function stateWalking()
+{
+	image_speed = 1;
+	move();
+	if (xMovement == 0 and yMovement == 0)
+	{
+		state = stateIdle;
+	}
+}
+
+state = stateIdle;

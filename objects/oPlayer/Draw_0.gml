@@ -6,14 +6,13 @@ draw_self()
 
 switch (state)
 {
-	case PLAYERSTATES.IDLE:
+	case stateIdle:
 		image_speed = 0;
 		animateSprite(sPlayerIdle)	
 	break;
-	case PLAYERSTATES.WALKING:
+	case stateWalking:
 		dir = point_direction(x, y, x + xMovement, y + yMovement)
 		animateSprite(sPlayerWalking)
 		image_speed = 1; 
 	break;
 }
-show_debug_message("PLAYER INDEX: " + string(image_index))
