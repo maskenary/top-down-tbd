@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__scribble_gen_1_model_limits_and_bezier_curves",
   "isCompatibility":false,
   "isDnD":false,

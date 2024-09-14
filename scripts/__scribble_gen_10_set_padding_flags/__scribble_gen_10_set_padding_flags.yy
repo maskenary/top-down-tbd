@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__scribble_gen_10_set_padding_flags",
   "isCompatibility":false,
   "isDnD":false,

@@ -67,6 +67,3 @@ function stateLocked()
 
 state = stateIdle;
 
-StartDialogue("Start", "dialoguetest.yarn")
-state = stateLocked;
-

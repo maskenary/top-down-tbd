@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_anim_wheel",
   "isCompatibility":false,
   "isDnD":false,

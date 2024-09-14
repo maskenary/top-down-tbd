@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_whitelist_sprite",
   "isCompatibility":false,
   "isDnD":false,

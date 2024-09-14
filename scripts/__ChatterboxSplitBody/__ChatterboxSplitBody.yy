@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__ChatterboxSplitBody",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_markdown_format",
   "isCompatibility":false,
   "isDnD":false,

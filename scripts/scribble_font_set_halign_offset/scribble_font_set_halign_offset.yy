@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_font_set_halign_offset",
   "isCompatibility":false,
   "isDnD":false,

@@ -12,8 +12,9 @@ var _dialogueSpeaker = scribble(ChatterboxGetContentSpeaker(chatterbox, 0))
 
 if (ChatterboxGetContentSpeaker(chatterbox, 0) == "Player")
 {
-	_dialogueContent.draw(_x + 400, _y + 100, typist)
+	_dialogueContent.wrap(800)
 	_dialogueSpeaker.draw(_x + 40, _y + 5)
+	_dialogueContent.draw(_x + 400, _y + 100, typist)
 }
 else 
 {
