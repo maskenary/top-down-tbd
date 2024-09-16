@@ -1,9 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-function stateAwaitingInteract
+interactAvailable = false;
 
-function stateIdle() 
+function execute()
+{
+	
+}
+
+function stateAwaitingInteract()
+{
+	
+}
+
+function stateIdle()
 {
 	
 }

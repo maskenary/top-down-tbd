@@ -8,16 +8,16 @@ switch (state)
 {
 	case stateIdle:
 		image_speed = 0;
-		animateSprite(sPlayerIdle)	
+		animateSprite(sPlayerIdle)
 	break;
 	case stateWalking:
 		dir = point_direction(x, y, x + xMovement, y + yMovement)
-		animateSprite(sPlayerWalking)
 		image_speed = 1; 
+		animateSprite(sPlayerWalking)
 	break;
 	case stateLocked:
 		image_speed = 0;
 		animateSprite(sPlayerIdle)	
 	break;
-	
 }
+

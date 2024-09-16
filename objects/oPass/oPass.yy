@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oCollidables",
-  "eventList":[],
+  "%Name":"oPass",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oCollidables",
+  "name":"oPass",
   "overriddenProperties":[],
   "parent":{
-    "name":"Collidables",
-    "path":"folders/Objects/Collidables.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sTransparent",
+    "path":"sprites/sTransparent/sTransparent.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

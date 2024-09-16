@@ -4,10 +4,41 @@
 image_speed = 0;
 walkSpeed = 1
 collisionTileId = layer_tilemap_get_id(layer_get_id("TilesCollision"));
-collisionObjects = [collisionTileId, oCollidables];
+collisionObjects = [collisionTileId, oNpc];
+interactObjects = [oNpc, oDoor];
+nearestInteractObject = undefined
+interactDistance = 5
 xMovement = 0;
 yMovement = 0;
 dir = point_direction(x, y, x , y + 1)
+
+function updateNearestInteract()
+{
+	var _closest = interactObjects[0]
+	var _closestDist = distance_to_object(_closest)
+	
+	for (var _i = 1; _i < array_length(interactObjects); _i++)
+	{
+		var _dist = distance_to_object(interactObjects[_i])
+	     if (_dist < _closestDist and interactObjects[_i])  
+		 {
+	        _closest = interactObjects[_i]
+	        _closestDist = _dist
+	     }
+	}
+	nearestInteractObject = _closest;
+}
+
+function interact()
+{
+	if (distance_to_object(nearestInteractObject) < interactDistance and (keyboard_check(vk_space) or keyboard_check(vk_enter)))
+	{
+		with (nearestInteractObject)
+		{
+			execute(); // Interactable objects need this function
+		}
+	}
+}
 
 function move()
 {
@@ -45,6 +76,8 @@ function animateSprite(_animationSprite)
 function stateIdle()
 {
 	move();
+	updateNearestInteract()
+	interact();
 	if (xMovement != 0 or yMovement != 0)
 	{	
 		state = stateWalking;
@@ -54,6 +87,8 @@ function stateIdle()
 function stateWalking()
 {
 	move();
+	updateNearestInteract();
+	interact();
 	if (xMovement == 0 and yMovement == 0)
 	{
 		state = stateIdle;

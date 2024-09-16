@@ -42,7 +42,7 @@ function stateWriting()
 
 function stateWaiting()
 {
-	if keyboard_check(vk_space)
+	if keyboard_check(vk_space) or keyboard_check(vk_enter)
 	{
 		startCooldown()
 		ChatterboxContinue(chatterbox);
