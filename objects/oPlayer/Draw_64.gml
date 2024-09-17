@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (distance_to_object(nearestInteractObject) <= interactDistance and nearestInteractObject.interactAvailable)
+if (distance_to_object(nearestInteractObject) <= interactDistance and nearestInteractObject.interactAvailable and state != stateLocked)
 {
 	var _x =  x - camera_get_view_x(view_camera[0]);
    var _y =  y - camera_get_view_y(view_camera[0]);

@@ -12,18 +12,9 @@ scribble_font_set_default("fnDialogue");
 typist = scribble_typist();
 typist.in(textSpeed, textFade);
 
-function startCooldown()
-{
-	alarm[0] = cooldown * game_get_speed(gamespeed_fps)
-}
-function checkCooldown()
-{
-	return alarm[0] == -1
-}
-
 function stateWriting()
 {
-	if (typist.get_state() == 1 and checkCooldown())
+	if (typist.get_state() == 1)
 	{
 		if ChatterboxIsWaiting(chatterbox)
 		{
@@ -42,9 +33,8 @@ function stateWriting()
 
 function stateWaiting()
 {
-	if keyboard_check(vk_space) or keyboard_check(vk_enter)
+	if keyboard_check_released(vk_space) or keyboard_check_released(vk_enter)
 	{
-		startCooldown()
 		ChatterboxContinue(chatterbox);
 		ChatterboxUpdate(chatterbox);
 		state = stateWriting

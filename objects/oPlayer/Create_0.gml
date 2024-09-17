@@ -40,12 +40,9 @@ function interact()
 {
 	if (distance_to_object(nearestInteractObject) < interactDistance and (keyboard_check(vk_space) or keyboard_check(vk_enter)))
 	{
-		if (variable_instance_exists(nearestInteractObject, "execute"))
+		if (variable_instance_exists(nearestInteractObject, "execute") and nearestInteractObject.interactAvailable)
 		{
-			with (nearestInteractObject)
-			{
-				execute(); // Interactable objects need this function
-			}
+			with (nearestInteractObject) { execute() } // Interactable objects need this function 
 		}
 	}
 }
@@ -107,7 +104,7 @@ function stateWalking()
 
 function stateLocked()
 {
-	
+	updateNearestInteract()
 }
 
 state = stateIdle;

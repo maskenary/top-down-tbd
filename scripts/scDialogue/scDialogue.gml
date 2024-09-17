@@ -9,6 +9,7 @@ function ChatterboxUpdate(_chatterbox)
 // Create an oDialogue according to parameters
 function StartDialogue(_node, _file)
 {
+	with (oPlayer) {state = stateLocked}
 	with (instance_create_depth(0,0,0,oDialogue))
 	{
 		viewWidth = view_wport[0]
@@ -17,4 +18,25 @@ function StartDialogue(_node, _file)
 		chatterbox = ChatterboxCreate();
 		ChatterboxJump(chatterbox, _node) // Found in datafiles folder
 	}
+}
+
+function GetSpeakerPortrait(_speaker, _portrait)
+{
+	switch (_speaker)
+	{
+		case "Player":
+		{
+			return sTransparent;
+		}
+		break;
+		case "Mr. Wang":
+			switch (_portrait)
+			{
+				case "Eyebrow": return sWangEyebrow;
+				case "Smile": return sWangSmile;
+				default: return sWangNeutral;
+			}
+		break;
+	}
+	return sTransparent;
 }

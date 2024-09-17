@@ -7,20 +7,22 @@ var _x = (display_get_gui_width()/2) - 400;
 var _y = (display_get_gui_height()/2) + 100;
 draw_sprite_ext(boxSprite, -1, _x, _y, 1, 1, 0, c_white, 1);
 
-var _dialogueContent = scribble(ChatterboxGetContentSpeech(chatterbox, 0))
-var _dialogueSpeaker = scribble(ChatterboxGetContentSpeaker(chatterbox, 0))
+var _content = scribble(ChatterboxGetContentSpeech(chatterbox, 0))
+var _speaker = scribble(ChatterboxGetContentSpeaker(chatterbox, 0))
+var _portrait = GetSpeakerPortrait(_speaker, ChatterboxGetContentSpeakerData(chatterbox, 0))
 
-if (ChatterboxGetContentSpeaker(chatterbox, 0) == "Player")
+if (_speaker == "Player")
 {
-	_dialogueContent.wrap(800)
-	_dialogueSpeaker.draw(_x + 40, _y + 5)
-	_dialogueContent.draw(_x + 400, _y + 100, typist)
+	_content.wrap(800)
+	_speaker.draw(_x + 40, _y + 5)
+	_content.draw(_x + 400, _y + 100, typist)
 }
 else 
 {
-	_dialogueContent.wrap(1200)
-	_dialogueSpeaker.draw(_x + 40, _y + 5)
-	_dialogueContent.draw(_x + 40, _y + 100, typist)
+	draw_sprite_ext(_portrait, -1, _x, _y, 1, 1, 0, c_white, 1); 
+	_content.wrap(1200)
+	_speaker.draw(_x + 40, _y + 5)
+	_content.draw(_x + 40, _y + 100, typist)
 }
 
 
