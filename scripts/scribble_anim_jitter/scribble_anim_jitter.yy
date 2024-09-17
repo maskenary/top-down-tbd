@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_anim_jitter",
   "isCompatibility":false,
   "isDnD":false,

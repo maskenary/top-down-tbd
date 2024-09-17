@@ -1,16 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+persistent = true;
 image_speed = 0;
 walkSpeed = 1
-collisionTileId = layer_tilemap_get_id(layer_get_id("TilesCollision"));
-collisionObjects = [collisionTileId, oNpc];
+collisionTileId = layer_tilemap_get_id("TilesCollision");
+collisionObjects = undefined;
 interactObjects = [oNpc, oDoor];
 nearestInteractObject = undefined
 interactDistance = 5
 xMovement = 0;
 yMovement = 0;
 dir = point_direction(x, y, x , y + 1)
+
+function updateCollisionObjects()
+{
+	collisionTileId = layer_tilemap_get_id("TilesCollision");
+	collisionObjects = [oNpc, collisionTileId];
+}
 
 function updateNearestInteract()
 {
@@ -33,9 +40,12 @@ function interact()
 {
 	if (distance_to_object(nearestInteractObject) < interactDistance and (keyboard_check(vk_space) or keyboard_check(vk_enter)))
 	{
-		with (nearestInteractObject)
+		if (variable_instance_exists(nearestInteractObject, "execute"))
 		{
-			execute(); // Interactable objects need this function
+			with (nearestInteractObject)
+			{
+				execute(); // Interactable objects need this function
+			}
 		}
 	}
 }
@@ -101,4 +111,5 @@ function stateLocked()
 }
 
 state = stateIdle;
+updateCollisionObjects()
 

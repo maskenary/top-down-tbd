@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"ChatterboxUnload",
   "isCompatibility":false,
   "isDnD":false,

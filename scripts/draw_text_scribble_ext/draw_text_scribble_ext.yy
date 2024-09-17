@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"draw_text_scribble_ext",
   "isCompatibility":false,
   "isDnD":false,

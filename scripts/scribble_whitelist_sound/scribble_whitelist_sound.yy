@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_whitelist_sound",
   "isCompatibility":false,
   "isDnD":false,

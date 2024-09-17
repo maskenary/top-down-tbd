@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_add_macro",
   "isCompatibility":false,
   "isDnD":false,

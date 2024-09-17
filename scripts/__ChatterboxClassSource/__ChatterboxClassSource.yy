@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__ChatterboxClassSource",
   "isCompatibility":false,
   "isDnD":false,

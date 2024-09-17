@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"ChatterboxVariableSetConstant",
   "isCompatibility":false,
   "isDnD":false,

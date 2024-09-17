@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__scribble_gen_6_build_lines",
   "isCompatibility":false,
   "isDnD":false,

@@ -3,5 +3,7 @@
 
 function ChangeRoom(_room, _x, _y)
 {
-	show_debug_message("tbd switch to ROOM: "+string(_room) + " at COORDS: "+string(_x)+","+string(_y));
+	room_goto(_room)
+	oPlayer.x = _x
+	oPlayer.y = _y
 }
