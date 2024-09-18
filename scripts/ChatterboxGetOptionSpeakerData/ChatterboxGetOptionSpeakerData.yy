@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ChatterboxGetOptionSpeakerData",
   "isCompatibility":false,
   "isDnD":false,

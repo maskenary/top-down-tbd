@@ -26,6 +26,8 @@
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Game","folderPath":"folders/Objects/Game.yy","name":"Game","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"World","folderPath":"folders/Objects/World.yy","name":"World","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"NPCs","folderPath":"folders/Objects/NPCs.yy","name":"NPCs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -65,7 +67,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"top-down-tbd",
   "resources":[
@@ -74,6 +76,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oDialogue","path":"objects/oDialogue/oDialogue.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
+    {"id":{"name":"oMainMenu","path":"objects/oMainMenu/oMainMenu.yy",},},
     {"id":{"name":"oNpc","path":"objects/oNpc/oNpc.yy",},},
     {"id":{"name":"oPass","path":"objects/oPass/oPass.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},

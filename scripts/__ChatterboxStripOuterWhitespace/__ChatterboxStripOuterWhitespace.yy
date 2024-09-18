@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__ChatterboxStripOuterWhitespace",
   "isCompatibility":false,
   "isDnD":false,

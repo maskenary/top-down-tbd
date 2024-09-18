@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__scribble_glyph_data_initialize",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__scribble_play_sound",
   "isCompatibility":false,
   "isDnD":false,

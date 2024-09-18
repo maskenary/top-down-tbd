@@ -16,7 +16,7 @@ if (_speakerString == "Player")
 {
 	draw_sprite_ext(boxSprite, -1, _x, _y, 1, 1, 0, c_white, 1);
 	_contentScribble.wrap(800)
-	_speakerScribble.draw(_x + 40, _y + 5)
+	//_speakerScribble.draw(_x + 40, _y + 5)
 	_contentScribble.draw(_x + 400, _y + 100, typist)
 }
 else 
@@ -24,7 +24,7 @@ else
 	draw_sprite_ext(boxSprite, -1, _x+1300, _y, -1, 1, 0, c_white, 1);
 	draw_sprite_ext(_portraitSprite, -1, _x+1000, _y+105, 4, 4, 0, c_white, 1); 
 	_contentScribble.wrap(900)
-	_speakerScribble.draw(_x + 1000, _y + 5)
+	//_speakerScribble.draw(_x + 1000, _y + 5)
 	_contentScribble.draw(_x + 100, _y + 100, typist)
 }
 
