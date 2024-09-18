@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_anim_blink",
   "isCompatibility":false,
   "isDnD":false,

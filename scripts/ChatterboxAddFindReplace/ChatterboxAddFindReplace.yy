@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"ChatterboxAddFindReplace",
   "isCompatibility":false,
   "isDnD":false,

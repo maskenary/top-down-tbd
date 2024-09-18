@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"ChatterboxNodeChangeCallback",
   "isCompatibility":false,
   "isDnD":false,

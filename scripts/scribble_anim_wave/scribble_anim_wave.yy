@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_anim_wave",
   "isCompatibility":false,
   "isDnD":false,

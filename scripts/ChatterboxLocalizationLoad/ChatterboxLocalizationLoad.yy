@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"ChatterboxLocalizationLoad",
   "isCompatibility":false,
   "isDnD":false,

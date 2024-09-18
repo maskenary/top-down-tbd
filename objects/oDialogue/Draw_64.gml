@@ -1,28 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Offsets are manually set from a top-left origin point in the center of the screen (wtf is this shit) 
+// Offsets are ALL MANUAL EXCEPT THE CENTERPOINT OF THE SCREEN (wtf is this shit) 
 
-var _x = (display_get_gui_width()/2) - 400;
+var _x = (display_get_gui_width()/2) - 600;
 var _y = (display_get_gui_height()/2) + 100;
-draw_sprite_ext(boxSprite, -1, _x, _y, 1, 1, 0, c_white, 1);
 
-var _content = scribble(ChatterboxGetContentSpeech(chatterbox, 0))
-var _speaker = scribble(ChatterboxGetContentSpeaker(chatterbox, 0))
-var _portrait = GetSpeakerPortrait(_speaker, ChatterboxGetContentSpeakerData(chatterbox, 0))
+var _contentString = ChatterboxGetContentSpeech(chatterbox, 0)
+var _speakerString = ChatterboxGetContentSpeaker(chatterbox, 0)
+var _contentScribble = scribble(_contentString)
+var _speakerScribble = scribble(_speakerString)
+var _portraitSprite = GetSpeakerPortrait(_speakerString, ChatterboxGetContentSpeakerData(chatterbox, 0))
 
-if (_speaker == "Player")
+if (_speakerString == "Player")
 {
-	_content.wrap(800)
-	_speaker.draw(_x + 40, _y + 5)
-	_content.draw(_x + 400, _y + 100, typist)
+	draw_sprite_ext(boxSprite, -1, _x, _y, 1, 1, 0, c_white, 1);
+	_contentScribble.wrap(800)
+	_speakerScribble.draw(_x + 40, _y + 5)
+	_contentScribble.draw(_x + 400, _y + 100, typist)
 }
 else 
 {
-	draw_sprite_ext(_portrait, -1, _x, _y, 1, 1, 0, c_white, 1); 
-	_content.wrap(1200)
-	_speaker.draw(_x + 40, _y + 5)
-	_content.draw(_x + 40, _y + 100, typist)
+	draw_sprite_ext(boxSprite, -1, _x+1300, _y, -1, 1, 0, c_white, 1);
+	draw_sprite_ext(_portraitSprite, -1, _x+1000, _y+105, 4, 4, 0, c_white, 1); 
+	_contentScribble.wrap(900)
+	_speakerScribble.draw(_x + 1000, _y + 5)
+	_contentScribble.draw(_x + 100, _y + 100, typist)
 }
 
 
