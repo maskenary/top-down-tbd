@@ -3,8 +3,10 @@
 
 // Offsets are ALL MANUAL EXCEPT THE CENTERPOINT OF THE SCREEN (wtf is this shit) 
 
-var _x = (display_get_gui_width()/2) - 600;
-var _y = (display_get_gui_height()/2) + 100;
+var _x = (display_get_gui_width()/2);
+var _y = (display_get_gui_height());
+
+draw_sprite_ext(boxSprite, 0, _x - boxWidthScaled/2, _y - boxHeightScaled - 30, boxScale, boxScale, 0, c_white, 1)
 
 var _contentString = ChatterboxGetContentSpeech(chatterbox, 0)
 var _speakerString = ChatterboxGetContentSpeaker(chatterbox, 0)
@@ -12,21 +14,9 @@ var _contentScribble = scribble(_contentString)
 var _speakerScribble = scribble(_speakerString)
 var _portraitSprite = GetSpeakerPortrait(_speakerString, ChatterboxGetContentSpeakerData(chatterbox, 0))
 
-if (_speakerString == "Player")
-{
-	draw_sprite_ext(boxSprite, -1, _x, _y, 1, 1, 0, c_white, 1);
-	_contentScribble.wrap(800)
-	//_speakerScribble.draw(_x + 40, _y + 5)
-	_contentScribble.draw(_x + 400, _y + 100, typist)
-}
-else 
-{
-	draw_sprite_ext(boxSprite, -1, _x+1300, _y, -1, 1, 0, c_white, 1);
-	draw_sprite_ext(_portraitSprite, -1, _x+1000, _y+105, 4, 4, 0, c_white, 1); 
-	_contentScribble.wrap(900)
-	//_speakerScribble.draw(_x + 1000, _y + 5)
-	_contentScribble.draw(_x + 100, _y + 100, typist)
-}
+_contentScribble.wrap(1000)
+_contentScribble.align(fa_middle, fa_center)
+_contentScribble.draw(_x, _y - boxHeightScaled/2, typist)
 
 
 if state = stateOptions

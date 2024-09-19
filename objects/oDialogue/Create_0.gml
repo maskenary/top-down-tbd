@@ -6,9 +6,13 @@ cooldown = 0.5;
 textFade = 10;
 textSpeed = 1;
 
-boxSprite = sDialogueBox
+boxScale = 6
+boxSprite = sBlackBoxDialogue
+boxWidthScaled = sprite_get_width(boxSprite) * boxScale
+boxHeightScaled = sprite_get_height(boxSprite) *boxScale
 
 scribble_font_set_default("fnDialogue");
+
 typist = scribble_typist();
 typist.in(textSpeed, textFade);
 
