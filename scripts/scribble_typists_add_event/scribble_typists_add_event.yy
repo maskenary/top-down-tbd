@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_typists_add_event",
   "isCompatibility":false,
   "isDnD":false,

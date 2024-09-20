@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_font_force_bilinear_filtering",
   "isCompatibility":false,
   "isDnD":false,

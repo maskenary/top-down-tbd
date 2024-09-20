@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_msdf_thickness_offset",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_font_exists",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnDialogue",
+  "%Name":"fnDialogueSpeaker",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":40,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":49,
   "maintainGms1Font":false,
-  "name":"fnDialogue",
+  "name":"fnDialogueSpeaker",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-scribble_font_set_default("fnDialogue")
+scribble_font_set_default("fnDialogueSpeaker")
 menuIndex = 0;
 selectionIndex = 0;
 menuArray[0] = ["Start", "Options", "Credits", "Exit"]

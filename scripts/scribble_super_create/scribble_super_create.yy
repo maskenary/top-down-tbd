@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"scribble_super_create",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"__ChatterboxXORShift32Random",
   "isCompatibility":false,
   "isDnD":false,

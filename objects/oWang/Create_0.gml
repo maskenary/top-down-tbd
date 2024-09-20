@@ -13,5 +13,6 @@ function execute()
 	{
 		StartDialogue(dialogueNode, "dialogue.yarn")
 		interactAvailable = false;
+		//StartDialoguePopup(["Hello", "GOOD DAY"], "Wang")
 	}
 }

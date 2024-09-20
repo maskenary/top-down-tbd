@@ -40,3 +40,44 @@ function GetSpeakerPortrait(_speaker, _portrait)
 	}
 	return sTransparent;
 }
+
+function StartDialoguePopup(_content, _speaker = undefined)
+{
+	_speaker = _speaker
+	with (oPlayer) {state = stateLocked}
+
+	with (instance_create_depth(0,0,0,oDialoguePopup))
+	{
+		content = _content
+		speaker = _speaker
+	}
+}
+
+
+function PrintSpeaker(_speaker, _x, _y, _xOffset = 0, _yOffset = 0)
+{
+	var _speakerScribble = scribble("[fnDialogueSpeaker]"+ _speaker)
+	_speakerScribble.align(fa_center, fa_top)
+	_speakerScribble.draw(_x + _xOffset, _y - _yOffset)
+}
+
+
+function PrintContent(_content, _wrapWidth, _x, _y, _xOffset = 0, _yOffset = 0, _typist = undefined)
+{
+	var _contentScribble = scribble("[fnDialogueContent]"+_content)
+	var _contentHeight = string_height_scribble_ext(_content, _wrapWidth)
+	_contentScribble.align(fa_center, fa_top)
+	_contentScribble.wrap(_wrapWidth)
+	if _typist != undefined { _contentScribble.draw(_x + _xOffset, _y - _yOffset, _typist) }
+	else { _contentScribble.draw(_x + _xOffset, _y - _yOffset) }
+}
+
+
+function PrintArrow(_x, _y, _xOffset = 0, _yOffset = 0)
+{
+	var _arrowScribble = scribble("^")
+	_arrowScribble.align(fa_center, fa_middle)
+	_arrowScribble.transform(0.5, -0.5, 0)
+	_arrowScribble.draw(_x + _xOffset, _y - _yOffset)
+}
+

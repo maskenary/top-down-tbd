@@ -4,14 +4,17 @@
 chatterbox = undefined
 cooldown = 0.5;
 textFade = 10;
-textSpeed = 1;
+textSpeed = 1.5;
 
 boxScale = 6
 boxSprite = sBlackBoxDialogue
 boxWidthScaled = sprite_get_width(boxSprite) * boxScale
 boxHeightScaled = sprite_get_height(boxSprite) *boxScale
 
-scribble_font_set_default("fnDialogue");
+wrapWidth = 700
+boxOffsetFromBottom = 30
+textOffsetFromTop = 20
+contentOffsetFromSpeaker = 20
 
 typist = scribble_typist();
 typist.in(textSpeed, textFade);
@@ -29,10 +32,6 @@ function stateWriting()
 			state = stateOptions
 		}
 	}
-	else
-	{
-		show_debug_message(typist.get_state())
-	}
 }
 
 function stateWaiting()
@@ -47,18 +46,7 @@ function stateWaiting()
 
 function stateOptions()
 {
-	var _index = undefined;
-	if (keyboard_check_released(ord("1"))) _index = 0;
-	if (keyboard_check_released(ord("2"))) _index = 1;
-	if (keyboard_check_released(ord("3"))) _index = 2;
-	if (keyboard_check_released(ord("4"))) _index = 3;
-	//If we've pressed a button, select that option
-	if (_index != undefined)
-	{
-		ChatterboxSelect(chatterbox, _index);
-		ChatterboxUpdate(chatterbox);
-		state = stateWriting
-	}
+	// TBD if this even exists
 }
 state = stateWriting
 

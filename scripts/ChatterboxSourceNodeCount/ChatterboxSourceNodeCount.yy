@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"ChatterboxSourceNodeCount",
   "isCompatibility":false,
   "isDnD":false,
