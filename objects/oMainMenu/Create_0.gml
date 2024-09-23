@@ -8,6 +8,12 @@ menuArray[0] = ["Start", "Options", "Credits", "Exit"]
 menuArray[1] = ["temp1", "temp2", "temp3", "temp4"]
 selectionLength = array_length(menuArray[menuIndex])
 
+boxScale = 6
+boxSprite = sBlackBox
+boxWidthScaled = sprite_get_width(boxSprite) * boxScale
+boxHeightScaled = sprite_get_height(boxSprite) *boxScale
+textOffset = 10
+
 function menu()
 {
 	if (keyboard_check_released(vk_space) or keyboard_check_released(vk_enter))
@@ -17,6 +23,7 @@ function menu()
 		{
 			// Start
 			case 0:
+				room_goto(rTest)
 			break;
 			// Options
 			case 1:

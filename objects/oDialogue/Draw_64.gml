@@ -10,13 +10,18 @@ var _content = ChatterboxGetContentSpeech(chatterbox, 0)
 var _speaker = ChatterboxGetContentSpeaker(chatterbox, 0)
 //var _portraitSprite = GetSpeakerPortrait(_speakerString, ChatterboxGetContentSpeakerData(chatterbox, 0))
 
-var _yOffset = boxHeightScaled - boxOffsetFromBottom + textOffsetFromTop + contentOffsetFromSpeaker
-PrintSpeaker(_speaker, _x, _y, 0, _yOffset)
+// Top of the box >
+var _ySpeaker = _y - boxHeightScaled - boxOffsetFromBottom + textOffsetFromTop
 
-PrintContent(_content, wrapWidth, _x, _y, 0, _yOffset - string_height_scribble(_speaker), typist)
+PrintSpeaker(_speaker, _x, _ySpeaker)
 
+var _yContent = _ySpeaker + string_height_scribble(_speaker) + contentOffsetFromSpeaker
+
+PrintContent(_content, wrapWidth, _x, _yContent, typist)
+
+var _yArrow = _y - boxOffsetFromBottom - 50
 if (state = stateWaiting)
 {
-	PrintArrow(_x, _y, 0, boxOffsetFromBottom - 50)
+	PrintArrow(_x, _yArrow)
 }
 

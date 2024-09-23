@@ -11,8 +11,8 @@ function execute()
 {
 	if (interactAvailable)
 	{
-		StartDialogue(dialogueNode, "dialogue.yarn")
+		//StartDialogue(dialogueNode, "dialogue.yarn")
 		interactAvailable = false;
-		//StartDialoguePopup(["Hello", "GOOD DAY"], "Wang")
+		StartDialoguePopup(["Hello", "GOOD DAY"])
 	}
 }
