@@ -6,6 +6,17 @@ function ChatterboxUpdate(_chatterbox)
 	node = ChatterboxGetCurrent(_chatterbox)
 }
 
+function DialogueStruct(_node, _file) constructor
+{
+    node = _node
+	file = _file
+}
+function DialoguePopupStruct(_array, _name = undefined) constructor
+{
+	array = _array
+	name = _name
+}
+
 // Create an oDialogue according to parameters
 function StartDialogue(_node, _file)
 {

@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+parentCutscene = undefined
+
 // Set these in the script that creates this
 content = []
-contentIndex = 0
 speaker = undefined
+
+contentIndex = 0
 
 cooldown = 0.5;
 textFade = 10;

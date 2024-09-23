@@ -68,7 +68,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"top-down-tbd",
   "resources":[
@@ -76,6 +76,7 @@
     {"id":{"name":"fnDialogueSpeaker","path":"fonts/fnDialogueSpeaker/fnDialogueSpeaker.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
+    {"id":{"name":"oCutscene","path":"objects/oCutscene/oCutscene.yy",},},
     {"id":{"name":"oDialogue","path":"objects/oDialogue/oDialogue.yy",},},
     {"id":{"name":"oDialoguePopup","path":"objects/oDialoguePopup/oDialoguePopup.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
@@ -222,6 +223,7 @@
     {"id":{"name":"draw_text_scribble_ext","path":"scripts/draw_text_scribble_ext/draw_text_scribble_ext.yy",},},
     {"id":{"name":"draw_text_scribble","path":"scripts/draw_text_scribble/draw_text_scribble.yy",},},
     {"id":{"name":"IsChatterbox","path":"scripts/IsChatterbox/IsChatterbox.yy",},},
+    {"id":{"name":"scCutscene","path":"scripts/scCutscene/scCutscene.yy",},},
     {"id":{"name":"scDialogue","path":"scripts/scDialogue/scDialogue.yy",},},
     {"id":{"name":"scGame","path":"scripts/scGame/scGame.yy",},},
     {"id":{"name":"scribble_add_macro","path":"scripts/scribble_add_macro/scribble_add_macro.yy",},},
@@ -289,6 +291,7 @@
     {"id":{"name":"string_length_scribble","path":"scripts/string_length_scribble/string_length_scribble.yy",},},
     {"id":{"name":"string_width_scribble_ext","path":"scripts/string_width_scribble_ext/string_width_scribble_ext.yy",},},
     {"id":{"name":"string_width_scribble","path":"scripts/string_width_scribble/string_width_scribble.yy",},},
+    {"id":{"name":"sqCutsceneTest","path":"sequences/sqCutsceneTest/sqCutsceneTest.yy",},},
     {"id":{"name":"__shd_scribble_bake_effect_4dir","path":"shaders/__shd_scribble_bake_effect_4dir/__shd_scribble_bake_effect_4dir.yy",},},
     {"id":{"name":"__shd_scribble_bake_effect_8dir_2px","path":"shaders/__shd_scribble_bake_effect_8dir_2px/__shd_scribble_bake_effect_8dir_2px.yy",},},
     {"id":{"name":"__shd_scribble_bake_effect_8dir","path":"shaders/__shd_scribble_bake_effect_8dir/__shd_scribble_bake_effect_8dir.yy",},},

@@ -5,7 +5,15 @@ state();
 
 if ChatterboxIsStopped(chatterbox)
 {
-	with (oPlayer) { state = stateIdle; }
+	if parentCutscene != undefined 
+	{
+		parentCutscene.resume()
+	}
+	else
+	{
+		with (oPlayer) { state = stateIdle; }
+	}
+	
 	instance_destroy(self)
 }
 
