@@ -12,7 +12,9 @@ function execute()
 	if (interactAvailable)
 	{
 		//StartDialogue(dialogueNode, "dialogue.yarn")
+		//StartDialoguePopup(["Hello", "GOOD DAY"])
+		StartCutscene(tlCutsceneTest)
+		
 		interactAvailable = false;
-		StartDialoguePopup(["Hello", "GOOD DAY"])
 	}
 }

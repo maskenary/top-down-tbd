@@ -13,6 +13,19 @@ xMovement = 0;
 yMovement = 0;
 dir = point_direction(x, y, x , y + 1)
 
+lockedAnimation = sPlayerIdle
+lockedX = 0
+lockedY = 0
+lockedSpeed = 0
+
+function resetLockedSettings()
+{
+	lockedAnimation = sPlayerIdle
+	lockedX = 0
+	lockedY = 0
+	lockedSpeed = 0
+}
+
 function updateCollisionObjects()
 {
 	collisionTileId = layer_tilemap_get_id("TilesCollision");
@@ -83,8 +96,8 @@ function animateSprite(_animationSprite)
 function stateIdle()
 {
 	move();
-	updateNearestInteract()
 	interact();
+	updateNearestInteract()
 	if (xMovement != 0 or yMovement != 0)
 	{	
 		state = stateWalking;
@@ -94,8 +107,8 @@ function stateIdle()
 function stateWalking()
 {
 	move();
-	updateNearestInteract();
 	interact();
+	updateNearestInteract();
 	if (xMovement == 0 and yMovement == 0)
 	{
 		state = stateIdle;
@@ -104,7 +117,8 @@ function stateWalking()
 
 function stateLocked()
 {
-	updateNearestInteract()
+	x+=lockedX
+	y+=lockedY
 }
 
 state = stateIdle;

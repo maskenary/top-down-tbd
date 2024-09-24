@@ -6,22 +6,12 @@ function ChatterboxUpdate(_chatterbox)
 	node = ChatterboxGetCurrent(_chatterbox)
 }
 
-function DialogueStruct(_node, _file) constructor
-{
-    node = _node
-	file = _file
-}
-function DialoguePopupStruct(_array, _name = undefined) constructor
-{
-	array = _array
-	name = _name
-}
-
 // Create an oDialogue according to parameters
 function StartDialogue(_node, _file)
 {
 	with (oPlayer) {state = stateLocked}
-	with (instance_create_layer(0,0,0,oDialogue))
+	var _dialogueInstance = instance_create_depth(0,0,0,oDialogue)
+	with (_dialogueInstance)
 	{
 		viewWidth = view_wport[0]
 		viewHeight = view_hport[0]
@@ -29,6 +19,7 @@ function StartDialogue(_node, _file)
 		chatterbox = ChatterboxCreate();
 		ChatterboxJump(chatterbox, _node) // Found in datafiles folder
 	}
+	return _dialogueInstance
 }
 
 function GetSpeakerPortrait(_speaker, _portrait)
@@ -56,12 +47,13 @@ function StartDialoguePopup(_content, _speaker = undefined)
 {
 	_speaker = _speaker
 	with (oPlayer) {state = stateLocked}
-
-	with (instance_create_depth(0,0,0,oDialoguePopup))
+	var _dialogueInstance = instance_create_depth(0,0,0,oDialoguePopup)
+	with (_dialogueInstance)
 	{
 		content = _content
 		speaker = _speaker
 	}
+	return _dialogueInstance
 }
 
 

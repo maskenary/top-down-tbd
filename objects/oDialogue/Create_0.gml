@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-parentCutscene = undefined
+if global.cutsceneInProgress
+{
+	timeline_running = false;
+}
 
 chatterbox = undefined
-cooldown = 0.5;
-textFade = 10;
-textSpeed = 1.5;
 
 boxScale = 6
 boxSprite = sBlackBoxDialogue
@@ -19,10 +19,12 @@ textOffsetFromTop = 20
 contentOffsetFromSpeaker = 20
 
 typist = scribble_typist();
-typist.in(textSpeed, textFade);
+typist.in(1.5, 10);
 
 function stateWriting()
 {
+	if keyboard_check_released(vk_space) or keyboard_check_released(vk_enter) { typist.skip() }
+	
 	if (typist.get_state() == 1)
 	{
 		if ChatterboxIsWaiting(chatterbox)

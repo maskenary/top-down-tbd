@@ -1,17 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-parentCutscene = undefined
+if global.cutsceneInProgress
+{
+	timeline_running = false;
+}
 
 // Set these in the script that creates this
 content = []
 speaker = undefined
 
 contentIndex = 0
-
-cooldown = 0.5;
-textFade = 10;
-textSpeed = 1.5;
 
 boxScale = 6
 boxSprite = sBlackBoxDialogue
@@ -24,10 +23,12 @@ textOffsetFromTop = 20
 contentOffsetFromSpeaker = 20
 
 typist = scribble_typist();
-typist.in(textSpeed, textFade);
+typist.in(1.5, 10);
 
 function stateWriting()
 {
+	if keyboard_check_released(vk_space) or keyboard_check_released(vk_enter) { typist.skip() }
+	
 	if (typist.get_state() == 1)
 	{
 		state = stateWaiting
@@ -40,7 +41,14 @@ function stateWaiting()
 	{
 		if (contentIndex + 1 > array_length(content) - 1)
 		{
-			with (oPlayer) { state = stateIdle; }
+			if  global.cutsceneInProgress
+			{
+				timeline_running = true
+			}
+			else
+			{
+				with (oPlayer) { state = stateIdle; }
+			}
 			instance_destroy(self)
 		}
 		else

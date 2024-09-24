@@ -5,9 +5,9 @@ state();
 
 if ChatterboxIsStopped(chatterbox)
 {
-	if parentCutscene != undefined 
+	if  global.cutsceneInProgress
 	{
-		parentCutscene.resume()
+		timeline_running = true
 	}
 	else
 	{
