@@ -3,7 +3,8 @@
 
 draw_self()
 
-
+/*
+OLD: based off of state
 switch (state)
 {
 	case stateIdle:
@@ -17,7 +18,20 @@ switch (state)
 	break;
 	case stateLocked:
 		image_speed = lockedSpeed
-		animateSprite(manualAnimation)	
+		animateSprite(lockedAnimation)	
 	break;
 }
+*/
 
+if xMovement != 0 or yMovement != 0
+{
+	dir = point_direction(x, y, x + xMovement, y + yMovement)
+	image_speed = 1;
+	animateSprite(sPlayerWalking)
+	
+}
+else
+{
+	image_speed = 0;
+	animateSprite(sPlayerIdle)
+}

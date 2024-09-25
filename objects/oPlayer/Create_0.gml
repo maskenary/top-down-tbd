@@ -18,12 +18,35 @@ lockedX = 0
 lockedY = 0
 lockedSpeed = 0
 
-function resetLockedSettings()
+function moveLocked()
 {
-	lockedAnimation = sPlayerIdle
-	lockedX = 0
-	lockedY = 0
-	lockedSpeed = 0
+	var _xDirection = sign(lockedX - x)
+	var _yDirection = sign(lockedY - y)
+
+	xMovement = _xDirection * lockedSpeed;
+	yMovement = _yDirection * lockedSpeed;
+	
+	if (xMovement != 0) and (yMovement != 0)
+	{
+		xMovement *= 0.707107;
+		yMovement *= 0.707107;
+	}
+	
+	move_and_collide(xMovement, yMovement, collisionObjects)	
+	
+	// Avoids stuttering when reaching the point
+	if ((x > lockedX-1 and x < lockedX+1) and (y > lockedY-1 and y < lockedY+1))
+	{
+		x = lockedX
+		y = lockedY
+	}
+}
+
+function setToPoint(_x = x, _y = y, _speed = 0)
+{
+	lockedX = _x
+	lockedY = _y
+	lockedSpeed = _speed
 }
 
 function updateCollisionObjects()
@@ -68,8 +91,9 @@ function move()
 
 	xMovement = _xDirection * walkSpeed;
 	yMovement = _yDirection * walkSpeed;
-
-	if (xMovement != 0) and (yMovement != 0) // normalize
+	
+	// Normalizes them
+	if (xMovement != 0) and (yMovement != 0) 
 	{
 		xMovement *= 0.707107;
 		yMovement *= 0.707107;
@@ -96,8 +120,8 @@ function animateSprite(_animationSprite)
 function stateIdle()
 {
 	move();
-	interact();
 	updateNearestInteract()
+	interact();
 	if (xMovement != 0 or yMovement != 0)
 	{	
 		state = stateWalking;
@@ -107,8 +131,8 @@ function stateIdle()
 function stateWalking()
 {
 	move();
-	interact();
 	updateNearestInteract();
+	interact();
 	if (xMovement == 0 and yMovement == 0)
 	{
 		state = stateIdle;
@@ -117,10 +141,9 @@ function stateWalking()
 
 function stateLocked()
 {
-	x+=lockedX
-	y+=lockedY
+	moveLocked()
 }
 
 state = stateIdle;
-updateCollisionObjects()
+
 

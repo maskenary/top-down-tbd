@@ -1,8 +1,5 @@
 with (oPlayer)
 {
-	lockedAnimation = sPlayerWalking
-	lockedX = 1
-	lockedSpeed = 1
-	dir = 0
+	setToPoint(x+50, y, 0.3)
 }
 

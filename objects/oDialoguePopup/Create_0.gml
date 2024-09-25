@@ -1,12 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if global.cutsceneInProgress
+// Set these in the script that creates this
+
+if global.currentCutscene != undefined
 {
-	timeline_running = false;
+	PauseCutscene()
 }
 
-// Set these in the script that creates this
 content = []
 speaker = undefined
 
@@ -41,9 +42,9 @@ function stateWaiting()
 	{
 		if (contentIndex + 1 > array_length(content) - 1)
 		{
-			if  global.cutsceneInProgress
+			if global.currentCutscene != undefined
 			{
-				timeline_running = true
+				ResumeCutscene()
 			}
 			else
 			{

@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if global.cutsceneInProgress
+if global.currentCutscene != undefined
 {
-	timeline_running = false;
+	PauseCutscene()
 }
 
 chatterbox = undefined

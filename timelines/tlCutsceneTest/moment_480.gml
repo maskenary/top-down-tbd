@@ -1,0 +1,1 @@
+StartDialoguePopup(["WASSUP MY G?", "HOWS IT GOING BRO"], "Mr. BROWN")

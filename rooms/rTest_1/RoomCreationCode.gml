@@ -1,1 +1,0 @@
-oPlayer.updateCollisionObjects()

@@ -76,6 +76,7 @@
     {"id":{"name":"fnDialogueSpeaker","path":"fonts/fnDialogueSpeaker/fnDialogueSpeaker.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
+    {"id":{"name":"oCutsceneTimelineHolder","path":"objects/oCutsceneTimelineHolder/oCutsceneTimelineHolder.yy",},},
     {"id":{"name":"oDialogue","path":"objects/oDialogue/oDialogue.yy",},},
     {"id":{"name":"oDialoguePopup","path":"objects/oDialoguePopup/oDialoguePopup.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
