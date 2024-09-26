@@ -3,7 +3,7 @@
 
 persistent = true;
 image_speed = 0;
-walkSpeed = 1
+walkSpeed = 1.5
 collisionTileId = layer_tilemap_get_id("TilesCollision");
 collisionObjects = undefined;
 interactObjects = [oNpc, oDoor];
@@ -13,34 +13,9 @@ xMovement = 0;
 yMovement = 0;
 dir = point_direction(x, y, x , y + 1)
 
-lockedAnimation = sPlayerIdle
 lockedX = 0
 lockedY = 0
 lockedSpeed = 0
-
-function moveLocked()
-{
-	var _xDirection = sign(lockedX - x)
-	var _yDirection = sign(lockedY - y)
-
-	xMovement = _xDirection * lockedSpeed;
-	yMovement = _yDirection * lockedSpeed;
-	
-	if (xMovement != 0) and (yMovement != 0)
-	{
-		xMovement *= 0.707107;
-		yMovement *= 0.707107;
-	}
-	
-	move_and_collide(xMovement, yMovement, collisionObjects)	
-	
-	// Avoids stuttering when reaching the point
-	if ((x > lockedX-1 and x < lockedX+1) and (y > lockedY-1 and y < lockedY+1))
-	{
-		x = lockedX
-		y = lockedY
-	}
-}
 
 function setToPoint(_x = x, _y = y, _speed = 0)
 {
@@ -101,22 +76,6 @@ function move()
 	move_and_collide(xMovement, yMovement, collisionObjects)
 }
 
-function animateSprite(_animationSprite)
-{
-	if sprite_index != _animationSprite{ sprite_index = _animationSprite }
-	var _cardinalDirection = round(dir/90);
-	if _cardinalDirection > 3 { _cardinalDirection = 0; }
-	var _cycleLength =  sprite_get_number(sprite_index) / 4
-	if (image_index > (_cycleLength * _cardinalDirection) + (_cycleLength - 0.01))
-	{
-		image_index = _cycleLength * _cardinalDirection
-	}
-	if (image_index < (_cycleLength * _cardinalDirection))
-	{
-		image_index = _cycleLength * _cardinalDirection
-	}
-}
-
 function stateIdle()
 {
 	move();
@@ -141,7 +100,9 @@ function stateWalking()
 
 function stateLocked()
 {
-	moveLocked()
+	var _movements = MoveToPoint(lockedX, lockedY, lockedSpeed)
+	xMovement = _movements[0]
+	yMovement = _movements[1]
 }
 
 state = stateIdle;
