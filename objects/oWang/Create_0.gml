@@ -4,8 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-
 interactAvailable = true;
+walkingSprite = sWangWalking
+idleSprite = sWangIdle
 
 function execute()
 {

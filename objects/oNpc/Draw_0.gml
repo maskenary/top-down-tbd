@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+draw_self()
+
 if xMovement != 0 or yMovement != 0
 {
 	// Update dir only if moving
