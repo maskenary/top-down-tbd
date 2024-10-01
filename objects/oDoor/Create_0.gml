@@ -10,5 +10,5 @@ toX = 0;
 
 function execute()
 {
-	ChangeRoom(toRoom, toX, toY)
+	ChangeRoom(toRoom, toX, toY, "fade")
 }

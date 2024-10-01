@@ -3,7 +3,7 @@
 
 persistent = true;
 image_speed = 0;
-walkSpeed = 1.5
+walkSpeed = 1
 collisionTileId = layer_tilemap_get_id("TilesCollision");
 collisionObjects = undefined;
 interactObjects = [oNpc, oDoor];

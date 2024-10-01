@@ -1,3 +1,3 @@
 toRoom = rTest_1; 
-toX = 100
-toY = 100
+toX = 300
+toY = 200
