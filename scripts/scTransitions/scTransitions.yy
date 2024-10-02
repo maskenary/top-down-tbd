@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scGame",
+  "%Name":"scTransitions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scGame",
+  "name":"scTransitions",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

@@ -3,8 +3,6 @@
 
 if place_meeting(x, y, oPlayer)
 {
-	with (oPlayer)
-	{
-		ChangeRoom(toRoom, toX, toY)
-	}
+	SetRoomTarget(toRoom, toX, toY)
+	Transition("fade")
 }
