@@ -15,8 +15,6 @@ function execute()
 		//StartDialogue("WangMeeting", "dialogue.yarn")
 		//StartDialoguePopup(["Hello", "GOOD DAY"])
 		StartCutscene(tlCutsceneTest)
-		
-		interactAvailable = false;
 	}
 }
 

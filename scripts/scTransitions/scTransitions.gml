@@ -19,6 +19,7 @@ function OutFinish()
 
 function Transition(_effect)
 {	
+	with (oPlayer) { state = stateLocked }
 	var _animationIn = undefined
 	var _animationOut = undefined
 	switch (_effect)

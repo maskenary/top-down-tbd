@@ -23,7 +23,8 @@ function menu()
 		{
 			// Start
 			case 0:
-				room_goto(rTest)
+				SetRoomTarget(rTest, 100, 100)
+				ChangeRoom()
 			break;
 			// Options
 			case 1:
@@ -33,6 +34,7 @@ function menu()
 			break;
 			// Exit
 			case 3:
+				game_end()
 			break;
 		}
 	}
