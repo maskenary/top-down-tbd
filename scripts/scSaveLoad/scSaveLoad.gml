@@ -41,13 +41,21 @@ function Save()
 // Here, we literally go backwards of the saving process to load
 function Load()
 {
-	// Load buffer from save file, get the string out of it, delete it
-	var _buffer = buffer_load(global.savefileName)
-	var _jsonSaveArray = buffer_read(_buffer, buffer_string)
-	buffer_delete(_buffer)
+	if SavefileExists()
+	{
+		// Load buffer from save file, get the string out of it, delete it
+		var _buffer = buffer_load(global.savefileName)
+		var _jsonSaveArray = buffer_read(_buffer, buffer_string)
+		buffer_delete(_buffer)
 	
-	// Deconverts JSON string into normal GML array, then sets the save data structs from it
-	var _saveArray = json_parse(_jsonSaveArray)
-	global.playerData = array_get(_saveArray, 0)
-	global.npcData = array_get(_saveArray, 1)
+		// Deconverts JSON string into normal GML array, then sets the save data structs from it
+		var _saveArray = json_parse(_jsonSaveArray)
+		global.playerData = array_get(_saveArray, 0)
+		global.npcData = array_get(_saveArray, 1)
+	}
+}
+
+function SavefileExists()
+{
+	return file_exists(global.savefileName)
 }

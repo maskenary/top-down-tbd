@@ -5,16 +5,8 @@ scribble_font_set_default("fnDialogueSpeaker")
 menuIndex = 0;
 selectionIndex = 0;
 
-if SavefileExists()
-{
-	menuArray[0] = ["New Game", "Continue", "Options", "Credits", "Exit"]
-}
-else
-{
-	menuArray[0] = ["New Game", "Options", "Credits", "Exit"]
-}
+menuArray[0] = ["Resume", "Save", "Menu", "Exit"]
 menuArray[1] = ["temp1", "temp2", "temp3", "temp4"]
-
 selectionLength = array_length(menuArray[selectionIndex])
 
 boxScale = 8

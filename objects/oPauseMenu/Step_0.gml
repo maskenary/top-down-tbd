@@ -9,37 +9,25 @@ if (keyboard_check_released(vk_space) or keyboard_check_released(vk_enter))
 {
 	switch (menuIndex)
 	{
-		// Main Menu
+		// Pause Menu
 		case 0:
 			switch (selectionIndex)
 			{
-				// New Game
+				// Resume
 				case 0:
-					room_goto(rTest)
+					with (oController) {unpause()}
 				break;
-				// Continue
+				// Save
 				case 1:
-					room_goto(rTest)
+					
 				break;
-				// Options
+				// Menu
 				case 2:
-					// Switches index to Options Menu
-					menuIndex = 1
-				break;
-				// Credits 
-				case 3:
 				break;
 				// Exit
-				case 4:
+				case 3:
 					game_end()
 				break;
-			}
-		break;
-		// Options Menu
-		case 1:
-			switch (selectionIndex)
-			{
-				default: show_debug_message("OPTIONS MENU BUTTON SELECTED (TODO)")
 			}
 		break;
 	}
@@ -52,9 +40,3 @@ else if (keyboard_check_released(vk_down) or keyboard_check_released(ord("S")))
 {
 	if (selectionIndex + 1 < selectionLength) { selectionIndex += 1; }
 }
-
-show_debug_message("SelectionIndex = "+string(selectionIndex))
-
-show_debug_message("SelectionLength = "+string(selectionLength))
-
-show_debug_message("MenuIndex = "+string(menuIndex))
