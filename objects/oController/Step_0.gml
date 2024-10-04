@@ -8,7 +8,7 @@ if keyboard_check_released(vk_escape) and room != rMainMenu
 	{
 		pause()
 	}
-	else
+	else if global.paused = true and oPauseMenu.menuEnabled == true
 	{
 		unpause()
 	}

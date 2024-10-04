@@ -2,19 +2,26 @@
 // You can write your code in this editor
 
 scribble_font_set_default("fnDialogueSpeaker")
-menuIndex = 0;
+popupIndex = 0;
 selectionIndex = 0;
 
-menuArray[0] = ["New Game", "Options", "Credits", "Exit"]
-menuArray[1] = ["temp1", "temp2", "temp3", "temp4"]
+// Set arrays from creator and call setSelectionLength()
+popupArray = []
+scriptArray = []
+selectionLength = 0;
+textDisplay = undefined
+menuParent = undefined
 
-selectionLength = array_length(menuArray[selectionIndex])
-
-boxScale = 8
+boxScale = 6
 boxSprite = sBlackBox
 boxWidthScaled = sprite_get_width(boxSprite) * boxScale
 boxHeightScaled = sprite_get_height(boxSprite) *boxScale
-textOffset = 15
+textOffset = 10
+
+function setSelectionLength()
+{
+	selectionLength = array_length(scriptArray)
+}
 
 
 

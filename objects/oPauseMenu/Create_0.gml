@@ -4,6 +4,7 @@
 scribble_font_set_default("fnDialogueSpeaker")
 menuIndex = 0;
 selectionIndex = 0;
+menuEnabled = true
 
 menuArray[0] = ["Resume", "Save", "Menu", "Exit"]
 menuArray[1] = ["temp1", "temp2", "temp3", "temp4"]

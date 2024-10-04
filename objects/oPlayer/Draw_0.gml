@@ -27,8 +27,6 @@ if xMovement != 0 or yMovement != 0
 {
 	// Update dir only if moving
 	dir = point_direction(x, y, x + xMovement, y + yMovement)
-	show_debug_message("xMovement: "+string(xMovement))
-	show_debug_message("yMovement: "+string(yMovement))
 	image_speed = 1;
 	AnimateSprite(sPlayerWalking, dir)
 }

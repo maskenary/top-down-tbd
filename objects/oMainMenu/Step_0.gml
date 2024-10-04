@@ -1,8 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if SavefileExists()
+{
+	menuArray[0] = ["New Game", "Continue", "Options", "Credits", "Exit"]
+}
+
 // Update based on current menu
 selectionLength = array_length(menuArray[menuIndex])
+
 
 // When choosing a button, do an action depending on which menu (menuIndex) and which selection (selectionIndex)
 if (keyboard_check_released(vk_space) or keyboard_check_released(vk_enter))
@@ -11,28 +17,53 @@ if (keyboard_check_released(vk_space) or keyboard_check_released(vk_enter))
 	{
 		// Main Menu
 		case 0:
-			switch (selectionIndex)
+			if SavefileExists()
 			{
-				// New Game
-				case 0:
-					room_goto(rTest)
-				break;
-				// Continue
-				case 1:
-					room_goto(rTest)
-				break;
-				// Options
-				case 2:
-					// Switches index to Options Menu
-					menuIndex = 1
-				break;
-				// Credits 
-				case 3:
-				break;
-				// Exit
-				case 4:
-					game_end()
-				break;
+				switch (selectionIndex)
+				{
+					// New Game
+					case 0:
+						room_goto(rTest)
+					break;
+					// Continue
+					case 1:
+						room_goto(rTest)
+					break;
+					// Options
+					case 2:
+						// Switches index to Options Menu
+						menuIndex = 1
+					break;
+					// Credits 
+					case 3:
+					break;
+					// Exit
+					case 4:
+						game_end()
+					break;
+				}
+			}
+			else
+			{
+				switch (selectionIndex)
+				{
+					// New Game
+					case 0:
+						room_goto(rTest)
+					break;
+					// Options
+					case 1:
+						// Switches index to Options Menu
+						menuIndex = 1
+					break;
+					// Credits 
+					case 2:
+					break;
+					// Exit
+					case 3:
+						game_end()
+					break;
+				}
 			}
 		break;
 		// Options Menu
@@ -53,8 +84,3 @@ else if (keyboard_check_released(vk_down) or keyboard_check_released(ord("S")))
 	if (selectionIndex + 1 < selectionLength) { selectionIndex += 1; }
 }
 
-show_debug_message("SelectionIndex = "+string(selectionIndex))
-
-show_debug_message("SelectionLength = "+string(selectionLength))
-
-show_debug_message("MenuIndex = "+string(menuIndex))

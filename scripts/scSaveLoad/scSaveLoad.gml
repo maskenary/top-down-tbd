@@ -17,6 +17,10 @@ global.playerData =
 
 function Save()
 {
+	// ok idk about this way of doing it, but if its called when were in a popup itll close it and open another one
+	ClosePopup() 
+	CreatePopup(["Ok", "Ok2"],[ClosePopup, ClosePopup], "Save complete")
+	
 	// Combines all the save data structs into one array.
 	var _saveArray = array_create(0)
 	array_push(_saveArray, global.playerData) // 0 index

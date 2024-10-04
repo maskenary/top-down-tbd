@@ -12,7 +12,6 @@ function pause()
 
 function unpause()
 {
-	show_debug_message("UNPAUSING")
 	global.paused = false
 	instance_activate_all()
 	with (oPauseMenu) { instance_destroy(self) }
