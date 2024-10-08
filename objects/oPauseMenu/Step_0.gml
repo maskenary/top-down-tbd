@@ -22,15 +22,17 @@ if menuEnabled = true
 					// Save
 					case 1:
 						menuEnabled = false;
-						CreatePopup(["Confirm", "Back"], [Save, ClosePopup], "Are you sure you want to save?", self)
+						CreatePopup(["Confirm", "Back"], [PopupSave, ClosePopup], "Are you sure you want to save?", self)
 					break;
 					// Menu
 					case 2:
-						room_goto(rMainMenu)
+						menuEnabled = false;
+						CreatePopup(["Yes", "No", "Back"], [SaveAndReturnToMenu, ReturnToMenu, ClosePopup], "Save before returning to menu?", self)
 					break;
 					// Exit
 					case 3:
-						game_end()
+						menuEnabled = false;
+						CreatePopup(["Yes", "No", "Back"], [SaveAndClose, CloseGame, ClosePopup], "Save before exiting?", self)
 					break;
 				}
 			break;

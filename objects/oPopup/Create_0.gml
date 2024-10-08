@@ -9,14 +9,16 @@ selectionIndex = 0;
 popupArray = []
 scriptArray = []
 selectionLength = 0;
-textDisplay = undefined
+popupTitle = undefined
 menuParent = undefined
 
 boxScale = 6
-boxSprite = sBlackBox
+boxSprite = sBlackBoxDialogue
 boxWidthScaled = sprite_get_width(boxSprite) * boxScale
 boxHeightScaled = sprite_get_height(boxSprite) *boxScale
-textOffset = 10
+textHorizontalOffset = 50
+textVerticalOffset = 100
+
 
 function setSelectionLength()
 {

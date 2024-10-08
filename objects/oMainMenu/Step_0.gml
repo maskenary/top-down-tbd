@@ -23,11 +23,14 @@ if (keyboard_check_released(vk_space) or keyboard_check_released(vk_enter))
 				{
 					// New Game
 					case 0:
-						room_goto(rTest)
+						SetRoomTarget(rTest, 100, 100)
+						Transition("fade")
 					break;
 					// Continue
 					case 1:
-						room_goto(rTest)
+						Load()
+						SetRoomTarget(global.playerData.svRoom, global.playerData.svX, global.playerData.svY)
+						Transition("fade")
 					break;
 					// Options
 					case 2:
@@ -49,7 +52,8 @@ if (keyboard_check_released(vk_space) or keyboard_check_released(vk_enter))
 				{
 					// New Game
 					case 0:
-						room_goto(rTest)
+						SetRoomTarget(rTest, 100, 100)
+						Transition("fade")
 					break;
 					// Options
 					case 1:

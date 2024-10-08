@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayerIdle",
-    "path":"sprites/sPlayerIdle/sPlayerIdle.yy",
+    "name":"sWangIdle",
+    "path":"sprites/sWangIdle/sWangIdle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

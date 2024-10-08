@@ -4,14 +4,14 @@
 global.currentPopup = undefined
 
 // Pass in x, y, names of options, and script names for those options in the same order
-function CreatePopup(_popupArray, _scriptArray, _textDisplay, _menuParent = undefined){
+function CreatePopup(_popupArray, _scriptArray, _popupTitle, _menuParent = undefined){
 	global.currentPopup = instance_create_depth(0, 0, -100, oPopup)
 	with (global.currentPopup)
 	{
 		menuParent = _menuParent
 		popupArray = _popupArray
 		scriptArray = _scriptArray
-		textDisplay = _textDisplay
+		popupTitle = _popupTitle
 		setSelectionLength()
 	}
 }
@@ -24,3 +24,14 @@ function ClosePopup()
 	}
 	global.currentPopup = undefined
 }
+
+function PopupSave() { Save(); ClosePopup(); }
+
+function SaveAndClose() { Save(); game_end(); }
+
+function CloseGame() { game_end(); }
+
+function ReturnToMenu() { ClosePopup(); SetRoomTarget(rMainMenu, 0, 0); Transition("fade"); }
+
+function SaveAndReturnToMenu() { ClosePopup(); Save(); ReturnToMenu(); }
+

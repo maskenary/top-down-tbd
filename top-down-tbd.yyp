@@ -89,8 +89,8 @@
     {"id":{"name":"oPopup","path":"objects/oPopup/oPopup.yy",},},
     {"id":{"name":"oWang","path":"objects/oWang/oWang.yy",},},
     {"id":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
-    {"id":{"name":"rTest_1","path":"rooms/rTest_1/rTest_1.yy",},},
     {"id":{"name":"rTest","path":"rooms/rTest/rTest.yy",},},
+    {"id":{"name":"rTest2","path":"rooms/rTest2/rTest2.yy",},},
     {"id":{"name":"__ChatterboxArrayCopyPart","path":"scripts/__ChatterboxArrayCopyPart/__ChatterboxArrayCopyPart.yy",},},
     {"id":{"name":"__ChatterboxArrayToString","path":"scripts/__ChatterboxArrayToString/__ChatterboxArrayToString.yy",},},
     {"id":{"name":"__ChatterboxBufferBatch","path":"scripts/__ChatterboxBufferBatch/__ChatterboxBufferBatch.yy",},},
@@ -331,7 +331,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},},
     {"roomId":{"name":"rTest","path":"rooms/rTest/rTest.yy",},},
-    {"roomId":{"name":"rTest_1","path":"rooms/rTest_1/rTest_1.yy",},},
+    {"roomId":{"name":"rTest2","path":"rooms/rTest2/rTest2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

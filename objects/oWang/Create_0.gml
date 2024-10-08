@@ -12,9 +12,7 @@ function execute()
 {
 	if (interactAvailable)
 	{
-		//StartDialogue("WangMeeting", "dialogue.yarn")
-		//StartDialoguePopup(["Hello", "GOOD DAY"])
-		StartCutscene(tlCutsceneTest)
+		
 	}
 }
 
